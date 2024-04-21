@@ -1,5 +1,5 @@
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
 
@@ -7,6 +7,8 @@ from time import sleep
 ADD_TO_CART_BTN = (By.CSS_SELECTOR, '[id*="addToCartButton"]')
 SIDE_NAV_ADD_TO_CART_BTN = (By.CSS_SELECTOR, "button[data-test='orderPickupButton']")
 MESSAGE_ADDED_TO_CART = (By.XPATH, '//span[text()="Added to cart"]')
+
+
 @then('Select an item')
 def select_an_item(context):
     context.driver.find_element(*ADD_TO_CART_BTN).click()

@@ -16,7 +16,14 @@ Feature: Search tests
     When Search for <item>
     Then Verify search results are shown for <expected_product>
     Examples:
-    |item     |expected_product   |
-    |mug      |mug                |
-    |tea      |tea                |
-    |coffee   |coffee             |
+    |item      |expected_product   |
+    |mug       |mug                |
+    |tea       |tea                |
+    |coffee    |coffee             |
+    |white mug |white mug          |
+
+
+  Scenario: Verify that user can see product names and images
+    Given Open target main page
+    When Search for AirPods (3rd Generation)
+    Then Verify that every product has a name and an image
