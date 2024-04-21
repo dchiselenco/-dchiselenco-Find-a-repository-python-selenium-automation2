@@ -44,6 +44,8 @@ driver.find_element(By.CSS_SELECTOR, ".a-icon-logo")
 #Create your Amazon account button
 # $$("#continue")
 driver.find_element(By.CSS_SELECTOR, "#continue")
+
+
 #Condition of Use link
 # $x("//*[text()='Conditions of Use']")
 driver.find_element(By.XPATH, "//*[text()='Conditions of Use']")
