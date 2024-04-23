@@ -28,10 +28,12 @@ def search_product(context, item):
     #sleep(6)
     context.app.header.search_product(item)
 
+
 @when('Click on Cart icon')
 def click_cart(context):
     #context.driver.find_element(*CART_ICON).click()
-    context.app.cart_page.click_cart()
+    context.app.header.click_cart()
+
 
 @when('Click on Add to Cart button')
 def click_add_to_cart(context):
