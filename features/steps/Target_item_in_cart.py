@@ -6,7 +6,7 @@ from time import sleep
 
 #ADD_TO_CART_BTN = (By.CSS_SELECTOR, '[id*="addToCartButton"]')
 #SIDE_NAV_ADD_TO_CART_BTN = (By.CSS_SELECTOR, "button[data-test='orderPickupButton']")
-#add .MESSAGE_ADDED_TO_CART = (By.XPATH, '//span[text()="Added to cart"]')
+#MESSAGE_ADDED_TO_CART = (By.XPATH, '//span[text()="Added to cart"]')
 
 
 @then('Select an item')

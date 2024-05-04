@@ -1,6 +1,8 @@
 from pages.base_page import Page
 from selenium.webdriver.common.by import By
 
+
+
 class MainPage(Page):
     SIGN_IN_BTN = (By.XPATH, "//a[@data-test='@web/AccountLink']")
 
