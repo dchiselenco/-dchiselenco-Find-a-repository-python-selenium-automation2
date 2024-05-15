@@ -5,12 +5,21 @@ from time import sleep
 
 
 
-CART_ICON = (By.XPATH, "//div[@data-test='@web/CartLink']")
+# CART_ICON = (By.XPATH, "//div[@data-test='@web/CartLink']")
 SEARCH_RESULT_HEADER = (By.XPATH, "//div[@data-test='resultsHeading']")
 LISTINGS = (By.CSS_SELECTOR, "[data-test='@web/site-top-of-funnel/ProductCardWrapper']")
 PRODUCT_TITLE = (By.CSS_SELECTOR, "[data-test='product-title']")
 PRODUCT_IMG = (By.CSS_SELECTOR, "[class*='ProductCardImage']")
 
+
+@when('Hover favorites icon')
+def hover_fav_icon(context):
+    context.app.search_results_page.hover_fav_icon()
+
+
+@then('Favorites tooltip is shown')
+def verify_tooltip(context):
+    context.app.search_results_page.verify_fav_tooltip()
 
 
 @then('Verify search results are shown for {expected_product}')
@@ -38,3 +47,5 @@ def verify_products_name_img(context):
         title = product.find_element(*PRODUCT_TITLE).text
         assert title, 'Product title not shown'
         product.find_element(*PRODUCT_IMG)
+
+
